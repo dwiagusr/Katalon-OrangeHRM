@@ -31,5 +31,3 @@ WebUI.click(findTestObject('Page_Login/btn_Login'))
 
 WebUI.verifyElementVisible(findTestObject('Page_Dashboard/text_Dashboard'))
 
-WebUI.closeBrowser()
-
