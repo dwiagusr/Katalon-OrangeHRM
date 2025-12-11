@@ -24,6 +24,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import org.apache.commons.lang.RandomStringUtils
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable
+import utils.FormHelper
 
 import org.apache.poi.ss.usermodel.Picture
 import org.openqa.selenium.Keys as Keys
@@ -43,15 +44,12 @@ String randomId = RandomStringUtils.randomAlphanumeric(5)
 
 // Filled In The Form
 WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_firstName'), 'Budi')
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_lastName'), 'Tampan')
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_middleName'), 'Banget')
+WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_middleName'), 'Tampan')
+WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_lastName'), 'Banget')
+
 
 // Clear Existing EmployeeID
-WebUI.click(findTestObject('Object Repository/Page_PIM/input_EmployeeId'))
-WebUI.sendKeys(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), Keys.chord(Keys.CONTROL, 'a'))
-WebUI.sendKeys(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), Keys.BACK_SPACE.toString())
-// Add Employee ID dengan Variabel Random tadi
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), randomId)
+FormHelper.clearAndType(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), randomId)
 
 // Simpan ID yang baru dibuat ke dalam "Memori Global"
 // Agar nanti bisa dibaca oleh TC05
