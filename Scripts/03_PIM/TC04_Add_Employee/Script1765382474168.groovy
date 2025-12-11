@@ -19,6 +19,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.webui.keyword.builtin.UploadFileKeyword
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import org.apache.commons.lang.RandomStringUtils
 import org.openqa.selenium.Keys as Keys
@@ -52,9 +53,13 @@ WebUI.sendKeys(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), Ke
 // Add Employee ID dengan Variabel Random tadi
 WebUI.setText(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), randomId)
 
+// Simpan ID yang baru dibuat ke dalam "Memori Global"
+// Agar nanti bisa dibaca oleh TC05
+GlobalVariable.employee_id = randomId
+
 // Opsional: Print ke Console biar kita tahu ID berapa yang dibuat robot
 println("===========================================")
-println("EMPLOYEE ID BARU ADALAH: " + randomId)
+println("EMPLOYEE ID BARU ADALAH: " + GlobalVariable.employee_id)
 println("===========================================")
 
 // Upload Profile Picture
@@ -63,10 +68,32 @@ WebUI.uploadFile(findTestObject('Object Repository/Page_PIM/btnUploadImg_AddEmpl
 // Click Save Btn
 WebUI.click(findTestObject('Object Repository/Page_PIM/btnSave_addEmployee'))
 
-// Add DelayfindTestObject('Object Repository/Page_PIM/ntf_Successfully')
+// Add Delay for waiting element visible
 WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'), 5)
 
 // Verify Toast Message Successfully 
+WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'))
+
+WebUI.delay(5)
+WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/Personal_Details/header_Personal_Details'))
+
+WebUI.scrollToElement(findTestObject('Object Repository/Page_PIM/Personal_Details/btn_Save_PersonalDetails'), 3)
+
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/ddl_Nationality'))
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Indonesian'))
+
+// Choose Martial Status
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/ddl_MaritalStatus'))
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Single'))
+
+// Choose Radio button Gender (Male)
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/radio_Male'))
+
+// Click Save buutton
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/btn_Save_PersonalDetails'))
+
+// Validation for Toaast Message
+WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'), 5)
 WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'))
 
 // Close Browser

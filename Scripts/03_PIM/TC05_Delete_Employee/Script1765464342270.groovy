@@ -17,20 +17,30 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('01_Authentication/TC01_Login_Valid'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(GlobalVariable.url)
+WebUI.click(findTestObject('Page_PIM/sideMenu_PIM'))
 
-WebUI.maximizeWindow()
+// Masukkan ID dari Global Variable (Hasil operan dari TC04)
+println('MENCARI KARYAWAN DENGAN ID: ' + GlobalVariable.employee_id)
 
-WebUI.waitForElementVisible(findTestObject('Page_Login/input_Username'), 10)
+WebUI.setText(findTestObject('Page_PIM/Employee_Information/input_Employee_Id'), GlobalVariable.employee_id)
 
-WebUI.setText(findTestObject('Page_Login/input_Username'), GlobalVariable.username)
+WebUI.click(findTestObject('Page_PIM/Employee_Information/btn_Search'))
 
-WebUI.setText(findTestObject('Page_Login/input_Password'), GlobalVariable.password)
+WebUI.scrollToElement(findTestObject('Page_PIM/Employee_Information/btn_Delete'), 3)
 
-WebUI.click(findTestObject('Page_Login/btn_Login'))
+WebUI.delay(2)
 
-WebUI.waitForElementVisible(findTestObject('Page_Dashboard/text_Dashboard'), 10)
-WebUI.verifyElementVisible(findTestObject('Page_Dashboard/text_Dashboard'))
+WebUI.click(findTestObject('Page_PIM/Employee_Information/btn_Delete'))
+
+WebUI.waitForElementVisible(findTestObject('Page_PIM/Employee_Information/btn_Confirmation_Yes'), 5)
+
+WebUI.click(findTestObject('Page_PIM/Employee_Information/btn_Confirmation_Yes'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'), 5)
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'))
+
+WebUI.closeBrowser()
 
