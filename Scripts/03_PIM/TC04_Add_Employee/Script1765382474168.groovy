@@ -43,9 +43,9 @@ WebUI.click(findTestObject('Object Repository/Page_PIM/addButton_PIM'))
 String randomId = RandomStringUtils.randomAlphanumeric(5)
 
 // Filled In The Form
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_firstName'), 'Budi')
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_middleName'), 'Tampan')
-WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_lastName'), 'Banget')
+WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_firstName'), var_firstName)
+WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_middleName'), var_middleName)
+WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_lastName'), var_lastName)
 
 
 // Clear Existing EmployeeID

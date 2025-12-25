@@ -1,0 +1,23 @@
+name: Katalon Studio CI
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Katalon Studio Action
+        uses: katalon-studio/katalon-studio-github-action@v2
+        with:
+          version: 'latest'
+          projectPath: ${{ github.workspace }}
+          # Argumen eksekusi sesuai dengan Test Suite Anda
+          args: '-noSplash -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_EndToEnd_PIM" -apiKey=${{ secrets.KATALON_API_KEY }}'
