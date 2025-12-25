@@ -6,4 +6,43 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>5dc920ca-d299-4332-80a6-73d129b2ac86</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>75f71843-e8f0-49b9-ba83-835b4cb37b5d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3f01995f-7234-46e8-a039-c3001ed74733</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Budi'</defaultValue>
+      <description></description>
+      <id>75f71843-e8f0-49b9-ba83-835b4cb37b5d</id>
+      <masked>false</masked>
+      <name>var_firstName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Tampan'</defaultValue>
+      <description></description>
+      <id>3f01995f-7234-46e8-a039-c3001ed74733</id>
+      <masked>false</masked>
+      <name>var_middleName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Banget'</defaultValue>
+      <description></description>
+      <id>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</id>
+      <masked>false</masked>
+      <name>var_lastName</name>
+   </variable>
 </TestCaseEntity>

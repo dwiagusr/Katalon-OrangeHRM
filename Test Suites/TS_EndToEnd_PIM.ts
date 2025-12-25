@@ -14,14 +14,32 @@
    <testCaseLink>
       <guid>88186430-d0a4-42b1-803a-1c7b6a6abe21</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/03_PIM/TC04_Add_Employee</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>75f71843-e8f0-49b9-ba83-835b4cb37b5d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>3f01995f-7234-46e8-a039-c3001ed74733</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>406703f3-e656-48bd-b3e4-1b7f52387022</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/03_PIM/TC05_Delete_Employee</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>

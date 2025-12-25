@@ -24,25 +24,24 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys
 import org.openqa.selenium.UsernameAndPassword as Keys
 
-// Open Browser
+// 1. Initialize the test execution
 WebUI.openBrowser('')
-
 WebUI.maximizeWindow()
 
-// Navigate to URL
+// 2. Navigate to the application URL using Global Variable
 WebUI.navigateToUrl(GlobalVariable.url)
 
-// Input valid username
+// 3. Enter valid username from Global Variable
 WebUI.setText(findTestObject('Object Repository/Page_Login/input_Username'), GlobalVariable.username)
 
-// Input Invalid Password
-WebUI.setText(findTestObject('Object Repository/Page_Login/input_Password'), 'Ngawur')
+// 4. Enter an invalid password for negative testing
+WebUI.setText(findTestObject('Object Repository/Page_Login/input_Password'), 'InvalidPassword123')
 
-// 5. Klik Login
+// 5. Execute login action
 WebUI.click(findTestObject('Object Repository/Page_Login/btn_Login'))
 
-// 6. VERIFIKASI: Pastikan pesan error muncul
+// 6. VERIFICATION: Ensure the error message "Invalid credentials" is displayed
 WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Login/msg_InvalidCredential'))
 
-// 7. Tutup Browser
+// 7. Cleanup: Terminate the browser session
 WebUI.closeBrowser()
