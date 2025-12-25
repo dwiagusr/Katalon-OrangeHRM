@@ -17,7 +17,7 @@ jobs:
       - name: Katalon Studio Action
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
-          version: 'latest'
+          version: '10.4.3'
           projectPath: ${{ github.workspace }}
           # Argumen eksekusi sesuai dengan Test Suite Anda
           args: '-noSplash -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_EndToEnd_PIM" -apiKey=${{ secrets.KATALON_API_KEY }}'
