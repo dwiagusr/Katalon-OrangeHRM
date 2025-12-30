@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>radio_Male</name>
+   <name>radio_Gander</name>
    <tag></tag>
    <elementGuidId>35630a8e-81ad-4e86-b211-0b21a4e34250</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.oxd-radio-input.oxd-radio-input--active.--label-right.oxd-radio-input</value>
+         <key>XPATH</key>
+         <value>//label[text()='${text}'] </value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//label[text()='Male']</value>
+         <key>CSS</key>
+         <value>span.oxd-radio-input.oxd-radio-input--active.--label-right.oxd-radio-input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>f68b4fae-294f-421f-b496-ea67a3cc3b35</webElementGuid>
+      <webElementGuid>d3266885-7520-467c-8341-cb6ed035c8c7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input</value>
-      <webElementGuid>38428778-53ac-4ee3-bd03-3eff1a10b92e</webElementGuid>
+      <webElementGuid>29b0f04a-ed95-4e9a-a318-e05105a3ab6e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;app&quot;)/div[@class=&quot;oxd-layout orangehrm-upgrade-layout&quot;]/div[@class=&quot;oxd-layout-container&quot;]/div[@class=&quot;oxd-layout-context&quot;]/div[@class=&quot;orangehrm-background-container&quot;]/div[@class=&quot;orangehrm-card-container&quot;]/div[@class=&quot;orangehrm-edit-employee&quot;]/div[@class=&quot;orangehrm-edit-employee-content&quot;]/div[@class=&quot;orangehrm-horizontal-padding orangehrm-vertical-padding&quot;]/form[@class=&quot;oxd-form&quot;]/div[@class=&quot;oxd-form-row&quot;]/div[@class=&quot;oxd-grid-3 orangehrm-full-width-grid&quot;]/div[@class=&quot;oxd-grid-item oxd-grid-item--gutters&quot;]/div[@class=&quot;oxd-input-group&quot;]/div[@class=&quot;--gender-grouped-field&quot;]/div[@class=&quot;oxd-input-group oxd-input-field-bottom-space&quot;]/div[2]/div[@class=&quot;oxd-radio-wrapper&quot;]/label[1]/span[@class=&quot;oxd-radio-input oxd-radio-input--active --label-right oxd-radio-input&quot;]</value>
-      <webElementGuid>9b7f010e-5e63-4ae5-9d64-861c4fd7629e</webElementGuid>
+      <webElementGuid>a7b2aa32-4db8-4c29-aa07-a4d2806d3e90</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='app']/div/div[2]/div[2]/div/div/div/div[2]/div/form/div[3]/div[2]/div[2]/div/div[2]/div/div[2]/div/label/span</value>
-      <webElementGuid>b2c428d5-24ac-475a-b458-8ed7717d41f0</webElementGuid>
+      <webElementGuid>567fb843-9225-4629-a719-092554660675</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,6 +55,6 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//label/span</value>
-      <webElementGuid>ff93b61b-0b09-4ee5-80cf-e0d75b3b5649</webElementGuid>
+      <webElementGuid>991ae048-0296-493a-9c33-89c24ec16a63</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

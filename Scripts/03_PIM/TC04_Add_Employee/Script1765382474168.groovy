@@ -1,102 +1,88 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-import java.awt.color.ProfileDataException as ProfileDataException
-import javax.wsdl.Import as Import
-import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import com.kms.katalon.core.testcase.TestCase as TestCase
-import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
-import com.kms.katalon.core.testobject.TestObject as TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.builtin.UploadFileKeyword as UploadFileKeyword
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword as WebUIAbstractKeyword
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
-import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 import utils.FormHelper as FormHelper
-import org.apache.poi.ss.usermodel.Picture as Picture
 
-// 1. Prerequisites: Call login test case to ensure an authenticated session
+// 1. Prerequisites: Authenticate session by calling the existing login test case
 WebUI.callTestCase(findTestCase('01_Authentication/TC01_Login_Valid'), [:], FailureHandling.STOP_ON_FAILURE)
 
-// 2. Navigation: Access the PIM (Personnel Information Management) module
+// 2. Navigation: Open the PIM (Personnel Information Management) module from the sidebar
 WebUI.click(findTestObject('Object Repository/Page_PIM/sideMenu_PIM'))
 
-// 3. Action: Initiate the 'Add Employee' process
+// 3. Action: Click the 'Add' button to open the new employee creation form
 WebUI.click(findTestObject('Object Repository/Page_PIM/addButton_PIM'))
 
 // --- GENERATE UNIQUE IDENTIFIER ---
-// Generate a 5-character alphanumeric random string to ensure test data uniqueness
-// Example results: "a7X9b", "K1m0P"
+// Create a 5-character alphanumeric string to ensure unique test data and prevent ID duplication
 String randomId = RandomStringUtils.randomAlphanumeric(5)
 
-// 4. Data Entry: Populate the employee creation form using variables
+// 4. Data Entry: Populate name fields using dynamic variables from the Data File (Excel)
 WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_firstName'), var_firstName)
-
 WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_middleName'), var_middleName)
-
 WebUI.setText(findTestObject('Object Repository/Page_PIM/input_Employee Full Name_lastName'), var_lastName)
 
-// 5. ID Management: Clear existing ID and input the newly generated random ID
+// 5. ID Management: Use custom keyword to clear the default ID and type the generated random ID
 FormHelper.clearAndType(findTestObject('Object Repository/Page_PIM/input_EmployeeId'), randomId)
 
-// Store the generated ID in a Global Variable for cross-test case data sharing (e.g., for TC05 Search/Delete)
+// --- CREATE LOGIN DETAILS SECTION ---
+// 6. Interaction: Toggle the 'Create Login Details' switch to reveal credential input fields
+WebUI.click(findTestObject('Page_PIM/Employee_Information/Toogle_loginDetail'))
+
+// Define unique credentials based on the employee's first name and the random ID
+String genUser = var_firstName.toLowerCase() + randomId
+String genPass = 'Katalon123!'
+
+// 7. Input Credentials: Set the username and password for the new employee account
+WebUI.setText(findTestObject('Page_PIM/Employee_Information/input_Username'), genUser)
+WebUI.setText(findTestObject('Page_PIM/Employee_Information/input_Password'), genPass)
+WebUI.setText(findTestObject('Page_PIM/Employee_Information/input_ConfirmPassword'), genPass)
+
+// Global Persistence: Save credentials to GlobalVariables for cross-test case data sharing (e.g., for TC06)
 GlobalVariable.employee_id = randomId
+GlobalVariable.employee_username = genUser
+GlobalVariable.employee_password = genPass
 
-// Debugging: Output the generated ID to the console for execution tracking
-println('===========================================')
+// Debugging: Log the generated credentials to the console for execution tracking
+println('\n===========================================')
+println('NEW EMPLOYEE CREATED')
+println('ID       : ' + GlobalVariable.employee_id)
+println('USERNAME : ' + GlobalVariable.employee_username)
+println('PASSWORD : ' + GlobalVariable.employee_password)
+println('===========================================\n')
 
-println('NEW GENERATED EMPLOYEE ID: ' + GlobalVariable.employee_id)
+// 8. Attachment: Upload a profile picture from the specified local directory
+WebUI.uploadFile(findTestObject('Page_PIM/btnUploadImg_AddEmployee'), 'F:\\Patrick.png')
 
-println('===========================================')
+// 9. Initial Save: Submit the employee and login details form to create the initial record
+WebUI.click(findTestObject('Page_PIM/btnSave_addEmployee'))
 
-// 6. Attachment: Upload the profile picture from the local directory
-WebUI.uploadFile(findTestObject('Object Repository/Page_PIM/btnUploadImg_AddEmployee'), 'F:\\Patrick.png')
+// 10. Synchronization: Wait for the system to redirect to the 'Personal Details' enrichment page
+WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/Personal_Details/header_Personal_Details'), 10)
 
-// 7. Submission: Save the initial employee record
-WebUI.click(findTestObject('Object Repository/Page_PIM/btnSave_addEmployee'))
-
-// Synchronization: Wait for the success notification to be visible
-WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'), 5)
-
-// Validation: Confirm the "Successfully Saved" toast message appears
-WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'))
-
-WebUI.delay(5)
-
-// 8. Page Redirection: Verify the system successfully navigates to 'Personal Details' page
-WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/Personal_Details/header_Personal_Details'))
-
-// Optimization: Scroll to the footer to ensure the 'Save' button is interactable
+// 11. Optimization: Scroll down to ensure that the bottom save button is within the viewport
 WebUI.scrollToElement(findTestObject('Object Repository/Page_PIM/Personal_Details/btn_Save_PersonalDetails'), 3)
 
-// 9. Data Enrichment: Update Nationality, Marital Status, and Gender
+// --- DYNAMIC PERSONAL DETAILS SECTION ---
+// 12. Dynamic Selection: Fill Nationality and Marital Status using Parameterized Test Objects
+// The '[("text") : var_xxx]' map passes values from Excel to the '${text}' placeholder in the XPath
 WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/ddl_Nationality'))
-
-WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Indonesian'))
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Nationality', [('text') : var_nationality]))
 
 WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/ddl_MaritalStatus'))
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Marital', [('text') : var_maritalStatus]))
 
-WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Single'))
+// 13. Dynamic Selection: Select Gender using a Parameterized Object
+WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/radio_Gander', [('text') : var_gender]))
 
-WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/radio_Male'))
-
-// 10. Final Submission: Save the enriched personal details
+// 14. Final Submission: Save the enriched personal details to the employee profile
 WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/btn_Save_PersonalDetails'))
 
-// Final Validation: Ensure the second stage of data entry is saved successfully
+// 15. Validation: Verify that the "Successfully Saved" toast notification is displayed
 WebUI.waitForElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'), 5)
-
 WebUI.verifyElementVisible(findTestObject('Object Repository/Page_PIM/ntf_Successfully'))
 
-// 11. Cleanup: Close the browser to end the test session
+// 16. Cleanup: Close the browser to end the test iteration
 WebUI.closeBrowser()
-

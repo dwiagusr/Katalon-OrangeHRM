@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div/div/header/div/div/span/h6</value>
+         <value>//h6[text()='Dashboard']</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>h6</value>
-      <webElementGuid>53ade792-fc17-4b96-b8dd-cf8fe421a607</webElementGuid>
+      <webElementGuid>cf285866-ece2-429f-9b29-7c1560c24878</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module</value>
-      <webElementGuid>3f79b32f-9489-4f5c-bb39-8cf859a003d1</webElementGuid>
+      <webElementGuid>1733f63b-cd97-4e57-a82d-beb0f057953b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Dashboard</value>
-      <webElementGuid>c5bac38e-09cc-4e31-a090-60bad4037c02</webElementGuid>
+      <webElementGuid>c9f4c7f7-5865-4588-b3e6-1403a50617e3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;app&quot;)/div[@class=&quot;oxd-layout orangehrm-upgrade-layout&quot;]/div[@class=&quot;oxd-layout-navigation&quot;]/header[@class=&quot;oxd-topbar&quot;]/div[@class=&quot;oxd-topbar-header&quot;]/div[@class=&quot;oxd-topbar-header-title&quot;]/span[@class=&quot;oxd-topbar-header-breadcrumb&quot;]/h6[@class=&quot;oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module&quot;]</value>
-      <webElementGuid>45ff1892-f95a-4c62-8a67-34a1c96f3f38</webElementGuid>
+      <webElementGuid>afa4b2b4-f409-4d42-ab93-4cd8d53552cc</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='app']/div/div/header/div/div/span/h6</value>
-      <webElementGuid>07c06dd7-949c-40b9-a8b0-1064d8d317c4</webElementGuid>
+      <webElementGuid>e0ff3f47-e5e4-4174-bb10-06c5a8ab9907</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//h6</value>
-      <webElementGuid>c03df246-028f-485b-aa18-e6e541020018</webElementGuid>
+      <webElementGuid>980b890b-ce04-4ffd-bde5-db76a384feed</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,6 +71,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//h6[(text() = 'Dashboard' or . = 'Dashboard')]</value>
-      <webElementGuid>84c301a7-c4b7-4c86-8518-5bfaaa6e3de2</webElementGuid>
+      <webElementGuid>3845e6ea-d9d1-4242-b06c-646417c2a23c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

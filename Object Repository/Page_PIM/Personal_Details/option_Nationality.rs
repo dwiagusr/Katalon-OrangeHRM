@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>option_Single</name>
+   <name>option_Nationality</name>
    <tag></tag>
-   <elementGuidId>31a23e86-5151-4290-8181-f89f641bfca3</elementGuidId>
+   <elementGuidId>657c06ec-148f-49ef-aa0c-2d467da4971b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@role='option']//span[text()='${text}']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@role='option']//span[text()='Single']</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>f725d117-d690-4bd7-85ec-9106a6a56012</webElementGuid>
+      <webElementGuid>21ed0c32-2eae-4d4b-b593-7e925ebc0c95</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>role</name>
       <type>Main</type>
       <value>option</value>
-      <webElementGuid>14c8d564-2f44-4b61-a32f-a1d2b876a70a</webElementGuid>
+      <webElementGuid>7b921283-2bda-4a19-bc6c-fe42601c93bb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,15 +38,15 @@
       <name>class</name>
       <type>Main</type>
       <value>oxd-select-option</value>
-      <webElementGuid>1e54493e-4b88-43a5-ba98-3f0502aeb3b3</webElementGuid>
+      <webElementGuid>a8c463ce-9dd6-46c8-b5c3-07f47e8ce459</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Single</value>
-      <webElementGuid>c78cd4fd-683d-4e32-8389-2a2904b82193</webElementGuid>
+      <value>Indonesian</value>
+      <webElementGuid>55872ab6-5067-49f7-904e-257ba650faf0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,46 +54,54 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;app&quot;)/div[@class=&quot;oxd-layout orangehrm-upgrade-layout&quot;]/div[@class=&quot;oxd-layout-container&quot;]/div[@class=&quot;oxd-layout-context&quot;]/div[@class=&quot;orangehrm-background-container&quot;]/div[@class=&quot;orangehrm-card-container&quot;]/div[@class=&quot;orangehrm-edit-employee&quot;]/div[@class=&quot;orangehrm-edit-employee-content&quot;]/div[@class=&quot;orangehrm-horizontal-padding orangehrm-vertical-padding&quot;]/form[@class=&quot;oxd-form&quot;]/div[@class=&quot;oxd-form-row&quot;]/div[@class=&quot;oxd-grid-3 orangehrm-full-width-grid&quot;]/div[@class=&quot;oxd-grid-item oxd-grid-item--gutters&quot;]/div[@class=&quot;oxd-input-group oxd-input-field-bottom-space&quot;]/div[2]/div[@class=&quot;oxd-select-wrapper&quot;]/div[@class=&quot;oxd-select-dropdown --positon-bottom&quot;]/div[@class=&quot;oxd-select-option&quot;]</value>
-      <webElementGuid>9f15ad50-1d11-4478-9178-e1674c8abdf5</webElementGuid>
+      <webElementGuid>3f92a1af-76d8-43c5-bea9-7ae4d14a05d8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app']/div/div[2]/div[2]/div/div/div/div[2]/div/form/div[3]/div/div[2]/div/div[2]/div/div[2]/div[2]</value>
-      <webElementGuid>99639592-f60e-410f-bd97-131e94170d90</webElementGuid>
+      <value>//div[@id='app']/div/div[2]/div[2]/div/div/div/div[2]/div/form/div[3]/div/div/div/div[2]/div/div[2]/div[84]</value>
+      <webElementGuid>4cd7a064-c300-4d65-a0c1-4039bf62fb01</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='-- Select --'])[2]/following::div[4]</value>
-      <webElementGuid>e86820c6-11c3-4d14-ba32-7627722c22aa</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Indian'])[1]/following::div[1]</value>
+      <webElementGuid>00d84b1e-faf0-425e-8fd1-8011ca57e1ba</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Married'])[1]/preceding::div[1]</value>
-      <webElementGuid>2e02b949-dc3b-472c-b055-d2b8cd768f41</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Icelander'])[1]/following::div[2]</value>
+      <webElementGuid>5d08bf5c-cebb-4f12-bc04-76f2db7c78b2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Iranian'])[1]/preceding::div[1]</value>
+      <webElementGuid>196246f8-b6d5-43c4-a7ec-b9284c37b5b6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/div[2]/div[2]</value>
-      <webElementGuid>e69cd172-c1f8-41ad-aeb8-5a7bdeb0c32c</webElementGuid>
+      <value>//div[84]</value>
+      <webElementGuid>c07127f3-8737-407b-a145-bbb5bf384269</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//div[(text() = 'Single' or . = 'Single')]</value>
-      <webElementGuid>fb50c935-2cd3-4e7e-9d05-ca98e4e5e03b</webElementGuid>
+      <value>//div[(text() = 'Indonesian' or . = 'Indonesian')]</value>
+      <webElementGuid>131deee8-5287-4e80-82fa-01afa899ba6a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
