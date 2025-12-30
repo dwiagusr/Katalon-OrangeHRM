@@ -14,26 +14,53 @@
    <testCaseLink>
       <guid>88186430-d0a4-42b1-803a-1c7b6a6abe21</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/03_PIM/TC04_Add_Employee</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/EmployeeData</testDataId>
+      </testDataLink>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>firstName</value>
          <variableId>75f71843-e8f0-49b9-ba83-835b4cb37b5d</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>middleName</value>
          <variableId>3f01995f-7234-46e8-a039-c3001ed74733</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>lastName</value>
          <variableId>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>nationality</value>
+         <variableId>ca356083-7046-424d-b7d3-8bcd05733f36</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>maritalStatus</value>
+         <variableId>a56b4f48-5928-421e-9b3b-e58dc73bd8ad</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>ab84e85a-ee78-45e6-aa00-93c3392e6ce1</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>gender</value>
+         <variableId>9327f732-9d4a-44f1-b228-aac40071d461</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>

@@ -24,6 +24,24 @@
       <value></value>
       <variableId>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ca356083-7046-424d-b7d3-8bcd05733f36</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a56b4f48-5928-421e-9b3b-e58dc73bd8ad</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9327f732-9d4a-44f1-b228-aac40071d461</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>'Budi'</defaultValue>
       <description></description>
@@ -44,5 +62,26 @@
       <id>e8da6c8c-8ffa-46d9-b149-eb1f86ae25c5</id>
       <masked>false</masked>
       <name>var_lastName</name>
+   </variable>
+   <variable>
+      <defaultValue>'Indonesian'</defaultValue>
+      <description></description>
+      <id>ca356083-7046-424d-b7d3-8bcd05733f36</id>
+      <masked>false</masked>
+      <name>var_nationality</name>
+   </variable>
+   <variable>
+      <defaultValue>'Single'</defaultValue>
+      <description></description>
+      <id>a56b4f48-5928-421e-9b3b-e58dc73bd8ad</id>
+      <masked>false</masked>
+      <name>var_maritalStatus</name>
+   </variable>
+   <variable>
+      <defaultValue>'Male'</defaultValue>
+      <description></description>
+      <id>9327f732-9d4a-44f1-b228-aac40071d461</id>
+      <masked>false</masked>
+      <name>var_gender</name>
    </variable>
 </TestCaseEntity>
