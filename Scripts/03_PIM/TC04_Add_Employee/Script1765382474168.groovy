@@ -75,7 +75,6 @@ WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/ddl_Mari
 WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/option_Marital', [('text') : var_maritalStatus]))
 
 // 13. Dynamic Selection: Select Gender using a Parameterized Object
-// This replaces the previous redundant if-else logic. Ensure your object XPath is //label[text()='${text}']
 WebUI.click(findTestObject('Object Repository/Page_PIM/Personal_Details/radio_Gander', [('text') : var_gender]))
 
 // 14. Final Submission: Save the enriched personal details to the employee profile
