@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC06_Setup_Leave_Admin</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f0d5746c-e076-457c-a22a-b55d466a2382</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c220652e-7ad8-42bf-a4b8-0c384eda2f8c</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4a5bd0bb-3bf4-40b8-bcf8-ded5c2270299</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c220652e-7ad8-42bf-a4b8-0c384eda2f8c</id>
+      <masked>false</masked>
+      <name>var_firstName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4a5bd0bb-3bf4-40b8-bcf8-ded5c2270299</id>
+      <masked>false</masked>
+      <name>var_lastName</name>
+   </variable>
+</TestCaseEntity>

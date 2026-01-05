@@ -10,39 +10,37 @@
    <dataSourceUrl></dataSourceUrl>
    <driver>InternalData</driver>
    <data>Joko null Racing Japanese Single Male</data>
-   <data>Iswanto Tambal Ban Indonesian Married Female</data>
-   <data>Wiyono Token Listrik British Single Female</data>
-   <data>Sulis Gacor Plecik American Married Male</data>
-   <data>BKR null 6969 Indonesian Married Male</data>
+   <data>Bambang Putih Merah Indonesian Merried Male</data>
+   <data>Kiwkiw Cuku Rukuk Singaporean Single Female</data>
    <internalDataColumns>
       <columnIndex>0</columnIndex>
       <name>firstName</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <internalDataColumns>
       <columnIndex>1</columnIndex>
       <name>middleName</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <internalDataColumns>
       <columnIndex>2</columnIndex>
       <name>lastName</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <internalDataColumns>
       <columnIndex>3</columnIndex>
       <name>nationality</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <internalDataColumns>
       <columnIndex>4</columnIndex>
       <name>maritalStatus</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <internalDataColumns>
       <columnIndex>5</columnIndex>
       <name>gender</name>
-      <size>5</size>
+      <size>3</size>
    </internalDataColumns>
    <isInternalPath>false</isInternalPath>
    <query></query>
