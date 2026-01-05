@@ -64,10 +64,38 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>406703f3-e656-48bd-b3e4-1b7f52387022</guid>
+      <guid>dad8d641-73fe-40f2-900e-0dd8063275a9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/03_PIM/TC05_Delete_Employee</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/04_Leave/TC06_Setup_Leave_Admin</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>ddc2600f-5a75-4e7a-b9ca-113c13bad42b</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/EmployeeData</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>ddc2600f-5a75-4e7a-b9ca-113c13bad42b</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>firstName</value>
+         <variableId>c220652e-7ad8-42bf-a4b8-0c384eda2f8c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>ddc2600f-5a75-4e7a-b9ca-113c13bad42b</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>lastName</value>
+         <variableId>4a5bd0bb-3bf4-40b8-bcf8-ded5c2270299</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8ca48082-6592-46f7-8d32-df089d72a4b2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/04_Leave/TC07_Apply_Leave_Employee</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
