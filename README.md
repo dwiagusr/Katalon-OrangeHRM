@@ -71,3 +71,5 @@ Uses `waitForElementVisible` and dynamic waits instead of hardcoded Delay, makin
 4. Navigate to **Test Suites > TS_EndToEnd_PIM.**
 
 5. Click **Run.**
+
+<img width="1916" height="954" alt="image" src="https://github.com/user-attachments/assets/85a0783f-91f2-433f-8f05-bc836ff34e06" />
